@@ -1,7 +1,7 @@
 package main
 
 // version is the current version of tutugit. It is injected at build time by GoReleaser.
-var version = "1.0.1-beta.1"
+var version = "1.0.2-beta.1"
 
 // state represents the current UI state of the application
 type state int

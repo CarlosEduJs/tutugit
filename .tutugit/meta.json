@@ -8,9 +8,37 @@
       "description": "Default project workspace",
       "commits": [],
       "status": "active"
+    },
+    {
+      "id": "fix-stage-toggle",
+      "name": "Fix stage toggle",
+      "description": "Fixing the bug that caused the files to switch stages.",
+      "commits": [
+        "c0cf211bc190185121636d33a684197418293896"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fix-generate-schema",
+      "name": "Fix generate schema",
+      "description": "Schemas not generated",
+      "commits": [
+        "ec12dfbc728def62667c799dd240a9b0ba43d747"
+      ],
+      "status": "active"
     }
   ],
-  "tags": {},
-  "active_workspace": "general",
-  "impacts": {}
+  "tags": {
+    "c0cf211bc190185121636d33a684197418293896": [
+      "fix"
+    ],
+    "ec12dfbc728def62667c799dd240a9b0ba43d747": [
+      "fix"
+    ]
+  },
+  "active_workspace": "fix-generate-schema",
+  "impacts": {
+    "c0cf211bc190185121636d33a684197418293896": "minor",
+    "ec12dfbc728def62667c799dd240a9b0ba43d747": "minor"
+  }
 }
