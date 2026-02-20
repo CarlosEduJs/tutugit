@@ -22,17 +22,23 @@
       "id": "fix-generate-schema",
       "name": "Fix generate schema",
       "description": "Schemas not generated",
-      "commits": [],
+      "commits": [
+        "ec12dfbc728def62667c799dd240a9b0ba43d747"
+      ],
       "status": "active"
     }
   ],
   "tags": {
     "c0cf211bc190185121636d33a684197418293896": [
       "fix"
+    ],
+    "ec12dfbc728def62667c799dd240a9b0ba43d747": [
+      "fix"
     ]
   },
   "active_workspace": "fix-generate-schema",
   "impacts": {
-    "c0cf211bc190185121636d33a684197418293896": "minor"
+    "c0cf211bc190185121636d33a684197418293896": "minor",
+    "ec12dfbc728def62667c799dd240a9b0ba43d747": "minor"
   }
 }
