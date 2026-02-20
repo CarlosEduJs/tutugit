@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=./schemas/config.schema.json
 $schema: ./schemas/config.schema.json
 project:
-    name: ""
-    description: ""
+    name: "tutugit"
+    description: "terminal-based Git power tool"

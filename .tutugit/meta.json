@@ -23,7 +23,8 @@
       "name": "Fix generate schema",
       "description": "Schemas not generated",
       "commits": [
-        "ec12dfbc728def62667c799dd240a9b0ba43d747"
+        "ec12dfbc728def62667c799dd240a9b0ba43d747",
+        "126c2cfd65acf6a210fda21d6fda0290874da2f2"
       ],
       "status": "active"
     }
@@ -38,6 +39,7 @@
   },
   "active_workspace": "fix-generate-schema",
   "impacts": {
+    "126c2cfd65acf6a210fda21d6fda0290874da2f2": "patch",
     "c0cf211bc190185121636d33a684197418293896": "minor",
     "ec12dfbc728def62667c799dd240a9b0ba43d747": "minor"
   }
