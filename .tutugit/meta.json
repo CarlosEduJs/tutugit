@@ -17,6 +17,13 @@
         "c0cf211bc190185121636d33a684197418293896"
       ],
       "status": "active"
+    },
+    {
+      "id": "fix-generate-schema",
+      "name": "Fix generate schema",
+      "description": "Schemas not generated",
+      "commits": [],
+      "status": "active"
     }
   ],
   "tags": {
@@ -24,7 +31,7 @@
       "fix"
     ]
   },
-  "active_workspace": "fix-stage-toggle",
+  "active_workspace": "fix-generate-schema",
   "impacts": {
     "c0cf211bc190185121636d33a684197418293896": "minor"
   }

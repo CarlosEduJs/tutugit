@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "tutugit metadata",
+  "description": "Schema for the .tutugit/meta.json configuration file.",
+  "type": "object",
+  "required": ["version", "workspaces", "tags", "active_workspace", "impacts"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Path or URI to this schema file."
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Schema version for future migrations.",
+      "default": 1
+    },
+    "workspaces": {
+      "type": "array",
+      "description": "Logical groupings of commits.",
+      "items": { "$ref": "#/definitions/Workspace" }
+    },
+    "tags": {
+      "type": "object",
+      "description": "Map of commit SHA to semantic tags.",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "active_workspace": {
+      "type": "string",
+      "description": "ID of the currently active workspace."
+    },
+    "impacts": {
+      "type": "object",
+      "description": "Map of commit SHA to impact level.",
+      "additionalProperties": {
+        "type": "string",
+        "enum": ["patch", "minor", "major"]
+      }
+    }
+  },
+  "definitions": {
+    "Workspace": {
+      "type": "object",
+      "required": ["id", "name", "commits", "status"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier (kebab-case).",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "name": {
+          "type": "string",
+          "description": "Human-readable workspace name."
+        },
+        "description": {
+          "type": "string",
+          "description": "Optional description of the workspace.",
+          "default": ""
+        },
+        "commits": {
+          "type": "array",
+          "description": "List of commit SHAs belonging to this workspace.",
+          "items": { "type": "string" }
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "archived"],
+          "description": "Workspace lifecycle status."
+        }
+      }
+    }
+  }
+}

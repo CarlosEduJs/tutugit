@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+
+	"tutugit/internal/assets"
 )
 
 // Workspace -> represents a logical grouping of commits.
@@ -78,36 +80,32 @@ func (m *Manager) Bootstrap() error {
 }
 
 func (m *Manager) copySchemas() error {
-	srcDir := filepath.Join(m.RootPath, "schemas")
 	destDir := filepath.Join(m.RootPath, ".tutugit", "schemas")
-
-	if _, err := os.Stat(srcDir); os.IsNotExist(err) {
-		return fmt.Errorf("schemas directory not found in project root")
-	}
 
 	if err := os.MkdirAll(destDir, 0755); err != nil {
 		return err
 	}
 
-	files, err := os.ReadDir(srcDir)
+	files, err := assets.SchemasFS.ReadDir("schemas")
 	if err != nil {
-		return err
+		return fmt.Errorf("failed to read embedded schemas: %w", err)
 	}
 
 	for _, f := range files {
 		if f.IsDir() {
 			continue
 		}
-		src := filepath.Join(srcDir, f.Name())
+		
+		src := "schemas/" + f.Name()
 		dest := filepath.Join(destDir, f.Name())
 
-		data, err := os.ReadFile(src)
+		data, err := assets.SchemasFS.ReadFile(src)
 		if err != nil {
-			return err
+			return fmt.Errorf("failed to read embedded schema %s: %w", f.Name(), err)
 		}
 
 		if err := os.WriteFile(dest, data, 0644); err != nil {
-			return err
+			return fmt.Errorf("failed to write schema %s: %w", f.Name(), err)
 		}
 	}
 
