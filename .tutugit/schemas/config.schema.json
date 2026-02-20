@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "tutugit configuration",
+  "description": "Schema for the .tutugit/config.yml project configuration file.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Path or URI to this schema file."
+    },
+    "project": {
+      "type": "object",
+      "description": "Basic project metadata.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Project name."
+        },
+        "description": {
+          "type": "string",
+          "description": "Short project description."
+        }
+      }
+    }
+  }
+}

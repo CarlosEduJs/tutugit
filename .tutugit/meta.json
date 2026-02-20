@@ -1,0 +1,16 @@
+{
+  "$schema": "./schemas/meta.schema.json",
+  "version": 1,
+  "workspaces": [
+    {
+      "id": "general",
+      "name": "General",
+      "description": "Default project workspace",
+      "commits": [],
+      "status": "active"
+    }
+  ],
+  "tags": {},
+  "active_workspace": "general",
+  "impacts": {}
+}
