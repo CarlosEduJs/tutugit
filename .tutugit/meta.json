@@ -8,9 +8,16 @@
       "description": "Default project workspace",
       "commits": [],
       "status": "active"
+    },
+    {
+      "id": "fix-stage-toggle",
+      "name": "Fix stage toggle",
+      "description": "Fixing the bug that caused the files to switch stages.",
+      "commits": [],
+      "status": "active"
     }
   ],
   "tags": {},
-  "active_workspace": "general",
+  "active_workspace": "fix-stage-toggle",
   "impacts": {}
 }

@@ -376,7 +376,7 @@ func (m *model) handleKeyHunks(msg tea.KeyMsg) (model, tea.Cmd) {
 		if m.hunkCursor < len(m.hunks)-1 {
 			m.hunkCursor++
 		}
-	case "space", "s":
+	case " ", "s":
 		if m.hunkCursor >= 0 && m.hunkCursor < len(m.hunks) &&
 			m.cursor >= 0 && m.cursor < len(m.files) {
 			m.isUpdating = true
@@ -527,7 +527,7 @@ func (m *model) handleKeyMain(msg tea.KeyMsg) (model, tea.Cmd) {
 		if m.cursor < len(m.files)-1 {
 			m.cursor++
 		}
-	case "space", "s":
+	case " ", "s":
 		if m.cursor >= 0 && m.cursor < len(m.files) {
 			f := m.files[m.cursor]
 			m.isUpdating = true
