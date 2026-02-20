@@ -13,11 +13,19 @@
       "id": "fix-stage-toggle",
       "name": "Fix stage toggle",
       "description": "Fixing the bug that caused the files to switch stages.",
-      "commits": [],
+      "commits": [
+        "c0cf211bc190185121636d33a684197418293896"
+      ],
       "status": "active"
     }
   ],
-  "tags": {},
+  "tags": {
+    "c0cf211bc190185121636d33a684197418293896": [
+      "fix"
+    ]
+  },
   "active_workspace": "fix-stage-toggle",
-  "impacts": {}
+  "impacts": {
+    "c0cf211bc190185121636d33a684197418293896": "minor"
+  }
 }
